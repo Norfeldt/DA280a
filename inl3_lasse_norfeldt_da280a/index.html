@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blomstermålabladet Feedback Formulär</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+  <style>
+    body {
+      padding: 2rem;
+    }
+
+    fieldset {
+      margin-bottom: 2rem !important;
+    }
+
+    legend {
+      font-size: 2.5rem !important;
+      color: #9c4dcb !important;
+      font-weight: bold;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Bild -->
+  <img src="assets/blomstermålabladet.jpeg" alt="Blomstermålabladet" style="width: 100%; max-width: 200px;">
+
+  <!-- Formulärets start -->
+  <form action="http://webshare.mah.se/tszagh/response.php" method="GET">
+    <!-- Kontaktuppgifter -->
+    <fieldset>
+      <legend>Kontaktuppgifter</legend>
+      <label for="name">Namn:</label>
+
+      <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      </head>
+      <input type="text" id="name" name="name" required><br>
+      <label for="age">Ålder:</label>
+      <input type="number" id="age" name="age" required>
+    </fieldset>
+
+    <!-- Dina besök på blomstermålabladet -->
+    <fieldset>
+      <legend>Dina besök på blomstermålabladet</legend>
+      <p>Hur ofta besöker du blomstermålabladet?</p>
+      <input type="radio" id="daily" name="visitFrequency" value="Varje dag" required>
+      <label for="daily">Varje dag</label><br>
+      <input type="radio" id="everyOtherDay" name="visitFrequency" value="Varannan dag">
+      <label for="everyOtherDay">Varannan dag</label><br>
+      <input type="radio" id="weekly" name="visitFrequency" value="Varje vecka">
+      <label for="weekly">Varje vecka</label>
+
+      <p>Vilka delar av blomstermålabladet brukar du besöka?</p>
+      <input type="checkbox" id="news" name="sectionsVisited" value="Nyheter">
+      <label for="news">Nyheter</label><br>
+      <input type="checkbox" id="foreign" name="sectionsVisited" value="Utrikes">
+      <label for="foreign">Utrikes</label><br>
+      <!-- Fler checkboxar för de andra sektionerna -->
+    </fieldset>
+
+    <!-- Vinn en T-shirt! -->
+    <fieldset>
+      <legend>Vinn en T-shirt!</legend>
+      <label for="best">Bästa med blomstermålabladet:</label><br>
+      <textarea id="best" name="best"></textarea><br>
+      <label for="worst">Sämsta med blomstermålabladet:</label><br>
+      <textarea id="worst" name="worst"></textarea><br>
+      <label for="email">Epost:</label>
+      <input type="email" id="email" name="email" required><br>
+      <label for="size">Storlek:</label>
+      <select id="size" name="size">
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M" selected>M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+    </fieldset>
+
+    <!-- Skicka/återställ -->
+    <input type="submit" value="Skicka">
+    <input type="reset" value="Återställ">
+  </form>
+</body>
+
+</html>
