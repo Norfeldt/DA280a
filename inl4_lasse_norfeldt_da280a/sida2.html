@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allt om CSS</title>
+  <link rel="stylesheet" href="global.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      color: #004d40;
+      font-size: 2.5em;
+      text-decoration: underline;
+    }
+
+    h2 {
+      color: #00695c;
+      font-size: 1.8em;
+    }
+
+    h3 {
+      color: #00796b;
+      font-size: 1.4em;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+
+    .intro {
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .highlight {
+      background-color: #b2dfdb;
+      font-weight: bold;
+    }
+
+    .conclusion {
+      text-align: center;
+      font-style: italic;
+      font-size: 1.2em;
+      color: #004d40;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Startsida</a></li>
+      <li><a href="sida1.html">Min författare</a></li>
+      <li><a href="sida2.html">Om CSS</a></li>
+      <li><a href="sida3.html">Formgivning efter en mall</a></li>
+    </ul>
+  </nav>
+
+
+  <h1>CSS - Cascading Style Sheets</h1>
+  <p class="intro">
+    CSS är ett stilmallsspråk som används för att beskriva presentationen av ett dokument skrivet i HTML. Låt oss
+    djupdyka i vad CSS är, varför det finns och hur vi använder det!
+  </p>
+
+  <h2>Vad är CSS?</h2>
+  <p>
+    CSS, som står för Cascading Style Sheets, gör det möjligt att separera innehåll (HTML) från presentation (CSS) och
+    därmed förenkla webbplatsers underhåll och återanvändning av designelement. Med CSS kan man styra layout, färger,
+    typsnitt, storlekar, marginaler, positionering och mycket mer för olika HTML-element.
+  </p>
+  <p>
+    CSS-regler består av en selektor som pekar ut vilket eller vilka element som ska påverkas, följt av ett block med
+    deklarationer som anger vilka stilegenskaper som ska tillämpas.
+  </p>
+
+  <h3>Varför finns CSS?</h3>
+  <p>
+    CSS utvecklades för att lösa ett problem med tidiga webbsidor där formateringen blandades in i HTML-koden. Detta
+    gjorde sidorna svåra att underhålla och uppdatera eftersom man var tvungen att ändra formateringen på varje enskild
+    sida.
+  </p>
+  <p>
+    <span class="highlight">Genom att använda CSS kan man ha all formatering och layout i en separat fil och bara
+      referera till den från HTML-dokumenten.</span> Detta gör att man kan ändra utseendet på en hel webbplats genom att
+    redigera en enda CSS-fil. Det blir mycket enklare och effektivare än att behöva gå in i varje HTML-dokument och
+    ändra där.
+  </p>
+  <p>
+    CSS möjliggör också en mer flexibel och kreativ design av webbsidor. Med CSS kan man skapa avancerade layouter,
+    responsiv design som anpassar sig efter skärmstorlek, animationer och mycket mer. Detta hade varit mycket svårare
+    eller omöjligt att åstadkomma med enbart HTML.
+  </p>
+
+  <h3>Hur använder vi oss av CSS?</h3>
+  <p>Det finns tre sätt att använda CSS:</p>
+  <ol>
+    <li>Inline CSS - Här skriver man CSS-koden direkt i style-attributet på ett HTML-element. Detta är ofta opraktiskt
+      eftersom det blandar innehåll och presentation och gör koden svårare att underhålla. Inline CSS bör användas
+      sparsamt.</li>
+    <li>Internt CSS - Här skriver man CSS-koden i &lt;style&gt;-taggar i &lt;head&gt;-sektionen av HTML-dokumentet.
+      Detta är bättre än inline CSS eftersom man separerar CSS från HTML, men det blir fortfarande specifikt för just
+      det dokumentet.</li>
+    <li>Externt CSS - Detta är det rekommenderade sättet. Här skriver man all CSS-kod i en separat .css-fil och länkar
+      till den från HTML-dokumentets &lt;head&gt; med en &lt;link&gt;-tagg. På så sätt får man en tydlig separation
+      mellan innehåll (HTML) och presentation (CSS) och kan återanvända samma CSS på flera sidor.</li>
+  </ol>
+
+  <h2>CSS-versioner</h2>
+
+  <h3>Vilka versioner finns det?</h3>
+  <p>CSS har utvecklats i flera versioner över tid:</p>
+  <ul>
+    <li>CSS1 släpptes 1996 och lade grunden för språket med grundläggande funktioner för typografi, färger, marginaler
+      m.m.</li>
+    <li>CSS2 kom 1998 och lade till mer avancerade funktioner som positionering, media queries och fler selektorer.</li>
+    <li>CSS3 påbörjades 2012 och är egentligen inte en enskild specifikation utan består av flera olika moduler som
+      utvecklas och standardiseras var för sig. CSS3 lägger till många nya funktioner som flexbox, grid layout,
+      animationer, 3D-transformationer, variabler m.m.</li>
+  </ul>
+
+  <h3>Varför finns det olika versioner?</h3>
+  <p>
+    Webben är i ständig utveckling och nya behov och möjligheter dyker upp hela tiden. Nya CSS-versioner har
+    introducerats för att lägga till fler funktioner och möjligheter att styra presentationen av webbsidor på mer
+    avancerade sätt.
+  </p>
+  <p>
+    CSS1 var en start men hade begränsningar. CSS2 utökade språket rejält och lade grunden för modern webblayout. Men i
+    takt med att webben blev mer avancerad och kraven ökade insåg man att det behövdes ännu mer.
+  </p>
+  <p>
+    <span class="highlight">CSS3 tog en annan approach än tidigare versioner. Istället för att släppa allt som en stor
+      specifikation valde man att dela upp det i mindre moduler som kunde utvecklas och standardiseras i olika
+      takt.</span> Detta gör det lättare att lägga till nya funktioner utan att behöva vänta på att allt ska bli klart.
+  </p>
+  <p>
+    Olika versioner finns alltså för att möta webbens utveckling och nya behov. Det är ett sätt att gradvis utöka och
+    förbättra språket.
+  </p>
+
+  <h3>Varför är det viktigt att veta vilken version en CSS-egenskap tillhör?</h3>
+  <p>Detta är viktigt av flera skäl:</p>
+  <ol>
+    <li>Webbläsarstöd - Olika webbläsare har stöd för olika CSS-versioner och egenskaper. Äldre webbläsare kanske inte
+      stödjer de senaste CSS-funktionerna. Genom att känna till vilken CSS-version en egenskap tillhör kan man avgöra om
+      den kommer fungera för majoriteten av använd</li>
+    <li>Fallback - Om man använder en CSS-egenskap från en nyare version kan det vara bra att ha en fallback för äldre
+      webbläsare. Då kan man använda en äldre teknik som reserv ifall den nya inte stöds.</li>
+    <li>Progressiv förbättring - Med kunskap om CSS-versioner kan man tillämpa progressiv förbättring, där man bygger en
+      grundläggande design som fungerar i alla webbläsare och sedan lägger till mer avancerade funktioner för webbläsare
+      som stödjer det.</li>
+    <li>Felsökning - Om något inte ser ut som förväntat i en viss webbläsare kan det bero på att en använd CSS-egenskap
+      inte stöds. Kunskap om versioner hjälper vid felsökning.</li>
+    <li>Framtidssäkring - Genom att hålla koll på utvecklingen av CSS och nya versioner kan man bygga webbplatser som är
+      förberedda för framtiden och kan dra nytta av nya funktioner när de blir tillgängliga.</li>
+  </ol>
+
+  <p class="conclusion">
+    Sammanfattningsvis är CSS en viktig del av webbutveckling som möjliggör separation av innehåll och presentation,
+    effektivare underhåll, och mer avancerad och flexibel design. Genom att förstå CSS-versioner och hur man använder
+    språket på rätt sätt kan man skapa bättre, mer tillgängliga och framtidssäkrade webbplatser.
+  </p>
+</body>
+
+</html>
